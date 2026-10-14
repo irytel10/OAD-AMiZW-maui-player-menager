@@ -22,6 +22,7 @@
                 Text="Dodaj gracza"
                 Command="{Binding AddPlayerCommandButton}" />
             
+<<<<<<< HEAD
             <Label
                 Text="Usuń gracza"
                 FontSize="24"
@@ -52,6 +53,11 @@
             <Button
                 Text="Edytuj gracza"
                 Command="{Binding EditPlayerCommandButton}"/>
+=======
+            
+            
+            
+>>>>>>> fad0de232215eb6968a828c6e703b465d7d19ac2
 
             <Label
                 Text="Lista graczy"

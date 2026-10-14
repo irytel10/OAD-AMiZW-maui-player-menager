@@ -17,8 +17,11 @@ namespace MauiApp3.ViewModel
         private readonly GetPlayerByIdQueryHandler _getPlayerByIdQueryHandler;
         private readonly GetPlayersQueryHandler _getPlayersQueryHandler;
         private readonly AddPlayerCommandHandler _addPlayerCommandHandler;
+<<<<<<< HEAD
         private readonly DeletePlayerCommandHandler _deletePlayerCommandHandler;
         private readonly EditPlayerCommandHandler _editPlayerCommandHandler;
+=======
+>>>>>>> fad0de232215eb6968a828c6e703b465d7d19ac2
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -42,6 +45,7 @@ namespace MauiApp3.ViewModel
             }
         }
         public ICommand AddPlayerCommandButton { get; }
+<<<<<<< HEAD
         public ICommand DeletePlayerCommandButton { get; }
         public ICommand FindPlayerCommandButton { get; }
         public ICommand EditPlayerCommandButton { get;}
@@ -52,10 +56,18 @@ namespace MauiApp3.ViewModel
             DeletePlayerCommandHandler deletePlayerCommandHandler,
             EditPlayerCommandHandler editPlayerCommandHandler
             )
+=======
+        public ICommand FindPlayerCommandButton { get; }
+        public MainViewModel(
+            GetPlayerByIdQueryHandler getPlayerByIdQueryHandler,
+            GetPlayersQueryHandler getPlayersQueryHandler,
+            AddPlayerCommandHandler addPlayerCommandHandler)
+>>>>>>> fad0de232215eb6968a828c6e703b465d7d19ac2
         {
             _getPlayerByIdQueryHandler = getPlayerByIdQueryHandler;
             _getPlayersQueryHandler = getPlayersQueryHandler;
             _addPlayerCommandHandler = addPlayerCommandHandler;
+<<<<<<< HEAD
             _deletePlayerCommandHandler = deletePlayerCommandHandler;
             _editPlayerCommandHandler = editPlayerCommandHandler;
 
@@ -63,6 +75,11 @@ namespace MauiApp3.ViewModel
             DeletePlayerCommandButton = new Command(DeletePlayer);
             FindPlayerCommandButton = new Command(FindPlayer);
             EditPlayerCommandButton = new Command(EditPlayer);
+=======
+
+            AddPlayerCommandButton = new Command(AddPlayer);
+            FindPlayerCommandButton = new Command(FindPlayer);
+>>>>>>> fad0de232215eb6968a828c6e703b465d7d19ac2
 
 
             LoadPlayers();
@@ -78,6 +95,7 @@ namespace MauiApp3.ViewModel
 
             LoadPlayers();
         }
+<<<<<<< HEAD
         private void DeletePlayer()
         {
             if(!int.TryParse(PlayerId, out int playerId))
@@ -126,6 +144,8 @@ namespace MauiApp3.ViewModel
     // Odświeżenie listy graczy
             LoadPlayers();
 }
+=======
+>>>>>>> fad0de232215eb6968a828c6e703b465d7d19ac2
         private void FindPlayer()
         {
             if (!int.TryParse(PlayerId, out int playerId))
